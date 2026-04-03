@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-export function useContactForm(endpoint: string) {
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+export function useContactForm(path: string) {
   const [form, setForm]       = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -19,7 +21,7 @@ export function useContactForm(endpoint: string) {
     setLoading(true);
     setError(null);
     try {
-      await axios.post(endpoint, form);
+      await axios.post(`${API_BASE}${path}`, form);
       setSuccess(true);
       setForm({});
     } catch (err: any) {
