@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-navy:       #1B2E78;
+  --color-navy-light: #2A3F9E;
+  --color-sky:        #3B82F6;
+  --color-sky-light:  #60A5FA;
+  --color-ice:        #EEF2FF;
+  --color-mist:       #F8FAFC;
+  --color-wa:         #25D366;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+@layer base {
+  html  { font-family: var(--font-body); }
+  h1, h2, h3 { font-family: var(--font-display); }
+}
