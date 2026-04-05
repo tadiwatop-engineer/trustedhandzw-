@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '../data/testimonials';
+import { Icon } from '../components/Icon';
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -129,8 +130,9 @@ export default function Testimonials() {
                   <StarRating rating={testimonials[3].rating} />
                 </div>
                 <p className="text-white font-semibold text-sm">{testimonials[3].name}</p>
-                <p className="text-blue-300 text-xs">
-                  {testimonials[3].flag} {testimonials[3].location} — {testimonials[3].service}
+                <p className="text-blue-300 text-xs flex items-center gap-1">
+                  <Icon icon={testimonials[3].flag} className="text-sm" />
+                  {testimonials[3].location} — {testimonials[3].service}
                 </p>
               </div>
             </div>
@@ -172,8 +174,9 @@ export default function Testimonials() {
                   <InitialsAvatar name={t.name} />
                   <div>
                     <p className="text-sm font-semibold text-[#1B2E78]">{t.name}</p>
-                    <p className="text-xs text-gray-400">
-                      {t.flag} {t.location}
+                    <p className="text-xs text-gray-400 flex items-center gap-1">
+                      <Icon icon={t.flag} className="text-xs" />
+                      {t.location}
                     </p>
                   </div>
                 </div>

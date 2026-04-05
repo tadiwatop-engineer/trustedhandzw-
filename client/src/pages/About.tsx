@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom';
+import { Icon } from '../components/Icon';
 
 const values = [
   {
-    icon: '📸',
+    icon: 'fa-camera',
     title: 'Photo Proof',
     desc: 'Every task is documented with photos sent directly to you via WhatsApp before we close the job.',
   },
   {
-    icon: '🧾',
+    icon: 'fa-receipt',
     title: 'Receipt Guarantee',
     desc: 'Every payment we make on your behalf comes with an official receipt — no exceptions.',
   },
   {
-    icon: '💬',
+    icon: 'fa-message',
     title: 'Live Updates',
     desc: 'We keep you in the loop throughout. No radio silence — you hear from us at every stage.',
   },
   {
-    icon: '🔒',
+    icon: 'fa-lock',
     title: 'Fully Accountable',
     desc: 'Your money is handled with complete transparency. We only spend what we agree on upfront.',
   },
@@ -137,7 +138,9 @@ export default function About() {
                 key={value.title}
                 className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <span className="text-3xl block mb-3">{value.icon}</span>
+                <div className="text-2xl text-blue-600 mb-3">
+                  <Icon icon={value.icon} size="lg" />
+                </div>
                 <h3
                   className="text-lg font-bold uppercase text-[#1B2E78] mb-2"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}

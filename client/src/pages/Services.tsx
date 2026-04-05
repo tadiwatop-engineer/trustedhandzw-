@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { services, categories } from '../data/services';
 import type { ServiceCategory } from '../data/services';
+import { Icon } from '../components/Icon';
 
 const categoryColors: Record<ServiceCategory, string> = {
   All:      'bg-[#1B2E78] text-white',
@@ -111,8 +112,8 @@ export default function Services() {
               <div className="p-6 flex flex-col flex-1">
                 {/* Icon + category badge */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-11 h-11 rounded-lg bg-[#EEF2FF] flex items-center justify-center text-2xl">
-                    {service.icon}
+                  <div className="w-11 h-11 rounded-lg bg-[#EEF2FF] flex items-center justify-center text-blue-600">
+                    <Icon icon={service.icon} size="lg" />
                   </div>
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[service.category]}`}>
                     {service.category}

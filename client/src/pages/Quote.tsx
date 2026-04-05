@@ -1,6 +1,7 @@
 import { useContactForm } from '../hooks/useContactForm';
 import { services } from '../data/services';
 import { Link } from 'react-router-dom';
+import { Icon } from '../components/Icon';
 
 const urgencyOptions = [
   { value: 'Standard',   label: 'Standard',   desc: 'Within 48 hours',  color: 'border-gray-200' },
@@ -67,11 +68,14 @@ export default function Quote() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex flex-wrap gap-6 justify-center sm:justify-start">
             {[
-              '✓ Free to request — no commitment',
-              '✓ Response within a few hours',
-              '✓ Price agreed before we start',
+              'Free to request — no commitment',
+              'Response within a few hours',
+              'Price agreed before we start',
             ].map(item => (
-              <span key={item} className="text-xs font-semibold text-[#1B2E78]">{item}</span>
+              <span key={item} className="text-xs font-semibold text-[#1B2E78] flex items-center gap-2">
+                <Icon icon="fa-check" className="text-[#25D366]" />
+                {item}
+              </span>
             ))}
           </div>
         </div>
