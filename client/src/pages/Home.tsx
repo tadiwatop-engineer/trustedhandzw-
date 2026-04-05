@@ -2,10 +2,22 @@ import { Link } from 'react-router-dom';
 import { featuredServices } from '../data/services';
 
 const trustSignals = [
-  { icon: '📸', label: 'Photo proof with every task' },
-  { icon: '🧾', label: 'Digital receipts always sent' },
-  { icon: '💬', label: 'WhatsApp live updates' },
-  { icon: '🌍', label: 'Nationwide across Zimbabwe' },
+  {
+    label: 'Photo proof with every task',
+    image: 'https://images.pexels.com/photos/1092708/pexels-photo-1092708.jpeg?auto=compress&cs=tinysrgb&w=500'
+  },
+  {
+    label: 'Digital receipts always sent',
+    image: 'https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=500'
+  },
+  {
+    label: 'WhatsApp live updates',
+    image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=500'
+  },
+  {
+    label: 'Nationwide across Zimbabwe',
+    image: 'https://images.pexels.com/photos/3584996/pexels-photo-3584996.jpeg?auto=compress&cs=tinysrgb&w=500'
+  },
 ];
 
 const stats = [
@@ -109,9 +121,17 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {trustSignals.map(signal => (
-            <div key={signal.label} className="bg-white rounded-xl border border-gray-100 p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
-              <span className="text-3xl mb-3">{signal.icon}</span>
-              <p className="text-sm font-semibold text-[#1B2E78]">{signal.label}</p>
+            <div key={signal.label} className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col">
+              <div className="h-40 overflow-hidden bg-gray-100">
+                <img
+                  src={signal.image}
+                  alt={signal.label}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4 flex items-center justify-center flex-grow">
+                <p className="text-sm font-semibold text-[#1B2E78] text-center">{signal.label}</p>
+              </div>
             </div>
           ))}
         </div>
