@@ -12,6 +12,7 @@ export interface Testimonial {
   location: string;
   message: string;
   rating: number;
+  countryFlag?: string;
 }
 
 export interface FormData {
