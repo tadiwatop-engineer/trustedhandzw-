@@ -4,7 +4,7 @@ import { featuredServices } from '../data/services';
 const trustSignals = [
   {
     label: 'Photo proof with every task',
-    image: 'https://images.pexels.com/photos/1092708/pexels-photo-1092708.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: 'https://images.pexels.com/photos/606933/pexels-photo-606933.jpeg?auto=compress&cs=tinysrgb&w=500'
   },
   {
     label: 'Digital receipts always sent',
@@ -12,11 +12,11 @@ const trustSignals = [
   },
   {
     label: 'WhatsApp live updates',
-    image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=500'
   },
   {
     label: 'Nationwide across Zimbabwe',
-    image: 'https://images.pexels.com/photos/3584996/pexels-photo-3584996.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: 'https://images.pexels.com/photos/3183609/pexels-photo-3183609.jpeg?auto=compress&cs=tinysrgb&w=500'
   },
 ];
 
