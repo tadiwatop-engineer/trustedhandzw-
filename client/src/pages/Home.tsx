@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
 import { featuredServices } from '../data/services';
+import { Icon } from '../components/Icon';
 
 const trustSignals = [
   {
     label: 'Photo proof with every task',
-    image: 'https://images.pexels.com/photos/606933/pexels-photo-606933.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: './images/building.jpg'
   },
   {
     label: 'Digital receipts always sent',
-    image: 'https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: './images/receipts.jpg'
   },
   {
     label: 'WhatsApp live updates',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: './images/whatsapp.jpg'
   },
   {
     label: 'Nationwide across Zimbabwe',
-    image: 'https://images.pexels.com/photos/3183609/pexels-photo-3183609.jpeg?auto=compress&cs=tinysrgb&w=500'
+    image: './images/Zimbabwe.jpg'
   },
 ];
 
@@ -78,7 +79,7 @@ export default function Home() {
             <div className="relative hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/3768146/pexels-photo-3768146.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                  src="./images/home.jpg"
                   alt="Trusted hands - helping families"
                   className="w-full h-auto object-cover"
                 />
@@ -164,7 +165,7 @@ export default function Home() {
                 className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm hover:shadow-md hover:border-blue-200 transition-all"
               >
                 <div className="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center text-xl mb-4">
-                  {service.icon}
+                  <Icon icon={service.icon} size="lg" className="text-[#1B2E78]" />
                 </div>
                 <h3
                   className="text-lg font-bold uppercase text-[#1B2E78] mb-2"
